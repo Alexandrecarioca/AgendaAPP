@@ -1,0 +1,22 @@
+Contato{nome=Alexandre, telefone=123, email=alexandre@email.com}
+
+Contato{nome=alexandre, telefone=122332, email=alexandre@email.com}
+
+Contato{nome=alexandre, telefone=122332, email=alexandre@email.com}
+
+Contato{nome=carioca, telefone=1244, email=carioca@email.com}
+
+Contato{nome=alexandre, telefone=122332, email=alexandre@email.com}
+
+Contato{nome=carioca, telefone=1244, email=carioca@email.com}
+
+Contato{nome=cecilia, telefone=123, email=cecilia@email.com}
+
+Contato{nome=alexandre, telefone=122332, email=alexandre@email.com}
+
+Contato{nome=carioca, telefone=1244, email=carioca@email.com}
+
+Contato{nome=cecilia, telefone=123, email=cecilia@email.com}
+
+Contato{nome=Jo�o, telefone=9797, email=joao@email.com}
+
