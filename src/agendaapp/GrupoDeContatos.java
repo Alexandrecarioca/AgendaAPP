@@ -4,7 +4,10 @@ package agendaapp;
 
 public class GrupoDeContatos {
     private String nome;
-    private int id;
+
+    public GrupoDeContatos(String nome) {
+        this.nome = nome;
+    }
 
     public String getNome() {
         return this.nome;
@@ -12,15 +15,6 @@ public class GrupoDeContatos {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public int getId() {
-        return this.id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-    
+    }   
     
 }

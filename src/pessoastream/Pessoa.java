@@ -1,7 +1,9 @@
 package pessoastream;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Pessoa {
 
@@ -55,14 +57,18 @@ public class Pessoa {
     public List<Pessoa> popularPessoa(){
         Pessoa pessoa1 = new Pessoa("p1", "Matheus Henrique", "Brasil", 18);
         Pessoa pessoa2 = new Pessoa("p2", "Hernandez Roja", "Mexio", 21);
-        Pessoa pessoa3 = new Pessoa("p3", "Mario Fernandes", "Canada", 22);
+        Pessoa pessoa3 = new Pessoa("p4", "Neymar Junior", "Brasil", 22);
         Pessoa pessoa4 = new Pessoa("p4", "Neymar Junior", "Brasil", 22);
         
         List<Pessoa> list = new ArrayList<Pessoa>();
+
         list.add(pessoa1);
         list.add(pessoa2);
         list.add(pessoa3);
         list.add(pessoa4);
+        Set<Pessoa> nova = new HashSet<>(list);
+        list.clear();
+        list.addAll(nova);
         
         return list;
     }

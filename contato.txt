@@ -1,1 +1,5 @@
-b;2;b@b
+alexandre;1;alexandre@email.com;Estudante
+carioca;233;carioca@carioca;null
+Daniel;32233;daniel@daniel;null
+asdsa;434;dsds;null
+sdsad;232;sdsd;Estudante
