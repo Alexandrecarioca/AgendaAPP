@@ -13,10 +13,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author Alexandre
- */
+
 public class AgendaAPP {
 
     /**
@@ -25,6 +22,9 @@ public class AgendaAPP {
     public static void main(String[] args) throws IOException {
         ArrayList<Contato> lista = new ArrayList<>();
         ArrayList<GrupoDeContatos> grupo = new ArrayList<>();
+        
+        Agenda agenda = new Agenda();
+        String nome, telefone, email;
         Scanner entrada = new Scanner(System.in);
         int op;
         boolean verdadeiro = true;
@@ -37,26 +37,26 @@ public class AgendaAPP {
             System.out.println("opçao [5] Exluir grupo de Contatos");
             System.out.println("Opção [6] ver grupos de Contatos");
             System.out.println("Opção [7] Sair");
-            op = entrada.nextInt();
+            op = Integer.valueOf(entrada.nextLine());
             switch (op) {
                 case 1:
-                    //funções
-                    Contato contato = new Contato();
                     System.out.println("Nome:");
-                    contato.setNome(entrada.next());
+                    nome = entrada.nextLine();
                     System.out.println("Telefone");
-                    contato.setTelefone(entrada.nextInt());
+                    telefone = entrada.nextLine();
                     System.out.println("E-mail:");
-                    contato.setEmail(entrada.next());
-                    
-                    lista.add(contato);
+                    email = entrada.nextLine();
+                    System.out.println("Nome: "+ nome + "\nTelefone:" + telefone + "\nEmail:" + email);
+                    agenda.salvarContato(nome, telefone, email);
+
+                    //lista.add(contato);
                     //salvarArquivo(contato);
-                    gravaContatos(lista);
+                    //gravaContatos(lista);
                     break;
                 case 2:
                     //funções
                     System.out.println("Digite nome do Contato");
-                    String nome = entrada.next();
+                    nome = entrada.next();
                     for (int  i = 0;  i < lista.size(); i ++) {
                         if (lista.get(i).getNome().equals(nome)) {
                             lista.remove(i);

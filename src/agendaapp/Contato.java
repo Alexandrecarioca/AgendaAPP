@@ -1,27 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package agendaapp;
 
-/**
- *
- * @author Alexandre
- */
 public class Contato {
+
     private String nome;
-    private int telefone;
+    private String telefone;
     private String email;
-    
-    public Contato(){
-        
+
+    public Contato() {
+
     }
-    public Contato(String nome, int telefone, String email){
+
+    public Contato(String nome, String telefone, String email) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
     }
+
     public String getNome() {
         return this.nome;
     }
@@ -30,11 +24,11 @@ public class Contato {
         this.nome = nome;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return this.telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
@@ -48,9 +42,7 @@ public class Contato {
 
     @Override
     public String toString() {
-        return "Contato{" + "nome=" + nome + ", telefone=" + telefone + ", email=" + email + "}\n";
+        return getNome() + ";" + getTelefone() + ";" + getEmail();
     }
-    
-    
-   
+
 }
