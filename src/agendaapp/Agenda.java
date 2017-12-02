@@ -128,6 +128,11 @@ public class Agenda {
             System.out.println("Grupo: " + listaDeContatos.get(i).getGrupo().getNome());
         }
     }
+    
+     public List<Contato> carregarContatos() {
+         
+        return listaDeContatos;
+    }
 
     public boolean excluirGrupodeContatos(String valor) {
         boolean temContato = false;
@@ -155,5 +160,15 @@ public class Agenda {
         lista.clear();
         lista.addAll(set);
         
+    }
+    public void listaContatosGrupo(String nomegrupo){
+        for (Contato  c: listaDeContatos) {
+            if (c.getGrupo().getNome().equals(nomegrupo)) {
+                System.out.println("nome: " + c.getNome()+ " Telefone: " + c.getTelefone());
+                
+            }
+            
+        }
+    
     }
 }

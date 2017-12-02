@@ -20,9 +20,9 @@ public class AgendaAPP {
         do {
             System.out.println("Opção [1] Adicionar Contato");
             System.out.println("Opção [2] Excluir Contato");
-            System.out.println("Opção [3] ver lista de Conattos");
-            System.out.println("opçao [4] Exluir grupo de Contatos");
-            System.out.println("Opção [5] ver grupos de Contatos");
+            System.out.println("Opção [3] ver lista de Conatos");
+            System.out.println("Opção [4] ver grupos de Contatos");
+            System.out.println("opçao [5] Exluir grupo de Contatos");
             System.out.println("Opção [6] Sair");
             op = Integer.valueOf(entrada.nextLine());
            
@@ -54,6 +54,13 @@ public class AgendaAPP {
                     agenda.carregarListaContatos();
                     break;
                 case 4:
+                    agenda.listarGrupos();
+                    System.out.println("Selecione um grupo");
+                    grupo = entrada.nextLine();
+                    agenda.listaContatosGrupo(grupo);
+
+                    break;
+                case 5:
                     //
                     System.out.println("Qual grupo a ser  excluido?");
                     grupo = entrada.nextLine();
@@ -62,10 +69,6 @@ public class AgendaAPP {
                     }else{
                         System.out.println("Grupo inexistente");
                     }
-                    break;
-                case 5:
-                    agenda.listarGrupos();
-
                     break;
                 case 6:
                     //funções
