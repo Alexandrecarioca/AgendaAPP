@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
@@ -61,6 +62,7 @@ public class Agenda {
         try {
             FileOutputStream arquivo = new FileOutputStream("contato.txt");
             PrintWriter pw = new PrintWriter(arquivo);
+
             for (Contato c : lista) {
                 pw.println(c);
             }
@@ -118,21 +120,31 @@ public class Agenda {
         return temContato;
     }
 
-    public void carregarListaContatos() {
-        System.out.println("Imprimindo");
-        for (int i = 0; i < listaDeContatos.size(); i++) {
-            System.out.println("Contato " + (i + 1));
+//    public void carregarListaContatos() {
+//        for (int i = 0; i < listaDeContatos.size(); i++) {
+//            System.out.println("Contato " + (i + 1));
+//            System.out.println("Nome: " + listaDeContatos.get(i).getNome());
+//            System.out.println("Telefone: " + listaDeContatos.get(i).getTelefone());
+//            System.out.println("Email: " + listaDeContatos.get(i).getEmail());
+//            System.out.println("Grupo: " + listaDeContatos.get(i).getGrupo().getNome());
+//        }
+//    }
+    public void carregarNomes(){
+          System.out.println("AGENDA");
+            for (int i = 0; i < listaDeContatos.size(); i++) {
+            //System.out.println("Contato " + (i + 1));
             System.out.println("Nome: " + listaDeContatos.get(i).getNome());
-            System.out.println("Telefone: " + listaDeContatos.get(i).getTelefone());
-            System.out.println("Email: " + listaDeContatos.get(i).getEmail());
-            System.out.println("Grupo: " + listaDeContatos.get(i).getGrupo().getNome());
+
         }
+
     }
+
     
-     public List<Contato> carregarContatos() {
-         
-        return listaDeContatos;
-    }
+//     public List<Contato> carregarContatos() {
+//         
+//         
+//        return listaDeContatos;
+//    }
 
     public boolean excluirGrupodeContatos(String valor) {
         boolean temContato = false;
@@ -146,6 +158,19 @@ public class Agenda {
         salvarArquivo(listaDeContatos);
         limpaDuplicado(grupos);
         return temContato;
+    }
+    public void verContato(String nome){
+       
+        for (int i = 0; i < listaDeContatos.size(); i++) {
+            if (listaDeContatos.get(i).getNome().equals(nome)) {
+            System.out.println("Nome: " + listaDeContatos.get(i).getNome());
+            System.out.println("Telefone: " + listaDeContatos.get(i).getTelefone());
+            System.out.println("Email: " + listaDeContatos.get(i).getEmail());
+            System.out.println("Grupo: " + listaDeContatos.get(i).getGrupo().getNome());
+                
+            } 
+        }
+
     }
     public void listarGrupos(){
         

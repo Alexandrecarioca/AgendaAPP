@@ -16,11 +16,11 @@ public class AgendaAPP {
         Scanner entrada = new Scanner(System.in);
         int op;
         boolean verdadeiro = true;
-
+        agenda.carregarNomes();
         do {
             System.out.println("Opção [1] Adicionar Contato");
             System.out.println("Opção [2] Excluir Contato");
-            System.out.println("Opção [3] ver lista de Conatos");
+            System.out.println("Opção [3] ver Contato");
             System.out.println("Opção [4] ver grupos de Contatos");
             System.out.println("opçao [5] Exluir grupo de Contatos");
             System.out.println("Opção [6] Sair");
@@ -51,8 +51,29 @@ public class AgendaAPP {
                     break;
                 case 3:
                     //Lista contatos
-                    agenda.carregarListaContatos();
-                    break;
+                    System.out.println("Digite nome do contato");
+                    nome = entrada.nextLine();
+                    agenda.verContato(nome);
+                    System.out.println("Deseja Edita o Contato ?");
+                    System.out.println("Sim [1]");
+                    System.out.println("Não [2]");
+                    int x;
+                    x = entrada.nextInt();
+                    if (x == 1) {
+                        System.out.println("Digite novo nome");
+                        nome=entrada.nextLine();
+                        System.out.println("Digite novo telefone");
+                        telefone = entrada.next();
+                        System.out.println("Digite novo E-mail");
+                        email=entrada.nextLine();
+                        System.out.println("Digite novo Grupo");
+                        grupo = entrada.nextLine();
+                        
+                    }
+                    else {
+                        break;
+                    }
+                    
                 case 4:
                     agenda.listarGrupos();
                     System.out.println("Selecione um grupo");
