@@ -70,9 +70,13 @@ public class AgendaAPP {
                         grupo = entrada.nextLine();
                         
                     }
-                    else {
-                        break;
+                    if (x == 2) {
+                        System.out.println("Saindo");
+                        
                     }
+ 
+                    
+                    break;
                     
                 case 4:
                     agenda.listarGrupos();
